@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matkailuopas ArOme</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: rgb(246, 244, 244);
+            color: rgb(6, 120, 44);
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .video-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            z-index: -1;
+        }
+
+        .video-container video {
+                    position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transform: translate(-50%, -50%);    
+        }
+        h1, h2, h3 {
+            text-align: center;
+        }
+        .nav-main {
+            background-color: rgb(6, 120, 44);
+            color: #af0ef4;
+            padding: 20px;
+            text-align: center;
+            width: 100%;
+            box-shadow: 0px 10px 10px rgba(0,0,0,0.1);
+            margin-bottom: 20px;
+        }
+        .nav-main a {
+            margin: 0 10px;
+            text-decoration: none;
+            color: white;
+        }
+        .nav-main a:hover {
+            color: #0a0a0a;
+        }
+        .content {
+            margin: 20px;
+            width: 80%;
+            background-color: rgb(247, 243, 243);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 10px 10px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+        .card-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .card {
+            background-color: white;
+            color: black;
+            margin: 10px;
+            width: 18rem;
+            border-radius: 10px;
+            box-shadow: 0px 5px 10px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+        .card img {
+            height: auto;
+            width: 100%;
+        }
+        .card-body {
+            padding: 15px;
+        }
+        .card h5, .card p {
+            margin: 10px 0;
+        }
+        .btn {
+            display: block;
+            margin: 10px auto;
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            text-align: center;
+            border-radius: 5px;
+            text-decoration: none;
+        }
+        .btn:hover {
+            background-color: #0056b3;
+        }
+        .form-group {
+            margin: 15px 0;
+        }
+        .form-container {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+        .form-group {
+            flex: 1;
+            margin: 10px;
+            min-width: 200px;
+        }
+    </style>
+</head>
+<body>
+    <div class="video-container">
+        <video autoplay loop muted playsinline>
+            <source src="video.mp4.mp4" type="video/mp4">
+        </video>
+    </div>
+    <h1>Matkailuopas ArOme</h1>
+    <nav class="nav-main">
+        <a href="index.html">Etusivu</a>
+        <a href="second.html">Matkakohteet</a>
+        <a href="third.html">Matkavinkit ja -oppaat</a>
+        <a href="fourth.html">Resurssit ja Työkalut</a>
+        <a href="five.html">Yhteystiedot</a>
+    </nav>
+    <div class="content">
+        <h2>Resurssit ja työkalut</h2>
+        
+        <h3>Matkabudjettilaskuri</h3>
+        <div class="form-container">
+            <div class="form-group">
+                <label for="destination">Valitse kohde:</label>
+                <select id="destination">
+                    <option value="50">Bali</option>
+                    <option value="80">Reykjavik</option>
+                    <option value="70">Kyoto</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="duration">Matkan kesto (päivinä):</label>
+                <input type="number" id="duration" value="1" min="1">
+            </div>
+        </div>
+        <button class="btn" onclick="calculateBudget()">Laske budjetti</button>
+        <p id="budget-result"></p>
+
+        <h3>Reittisuunnittelija</h3>
+        <div class="form-container">
+            <div class="form-group">
+                <label for="route">Syötä reitti (esim. Helsinki-Tokio):</label>
+                <input type="text" id="route">
+            </div>
+            <div class="form-group">
+                <label for="schedule">Aikataulu:</label>
+                <input type="date" id="schedule">
+            </div>
+        </div>
+        <button class="btn" onclick="planRoute()">Suunnittele reitti</button>
+        <p id="route-result"></p>
+
+        </ul>
+
+        <h3>Matka-arvostelut</h3>
+        <ul id="reviews-list">
+            <li>"Bali on upea paikka rentoutumiseen!" - Anna</li>
+            <li>"Reykjavikin luonto on henkeäsalpaava." - Mika</li>
+            <li>"Kyoto on täynnä historiaa ja kauneutta." - Sari</li>
+        </ul>
+    </div>
+
+    <script>
+        function calculateBudget() {
+            const destination = document.getElementById('destination').value;
+            const duration = document.getElementById('duration').value;
+            const budget = destination * duration;
+            document.getElementById('budget-result').innerText = `Arvioitu matkakustannus: ${budget} euroa.`;
+        }
+
+        function planRoute() {
+            const route = document.getElementById('route').value;
+            const schedule = document.getElementById('schedule').value;
+            document.getElementById('route-result').innerText = `Reitti: ${route}, Aikataulu: ${schedule}`;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matkailuopas ArOme</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: rgb(246, 244, 244);
+            color: rgb(6, 120, 44);
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .video-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            z-index: -1;
+        }
+
+        .video-container video {
+                    position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transform: translate(-50%, -50%);    
+        }
+        h1, h2, h3 {
+            text-align: center;
+        }
+        .nav-main {
+            background-color: rgb(6, 120, 44);
+            color: #af0ef4;
+            padding: 20px;
+            text-align: center;
+            width: 100%;
+            box-shadow: 0px 10px 10px rgba(0,0,0,0.1);
+            margin-bottom: 20px;
+        }
+        .nav-main a {
+            margin: 0 10px;
+            text-decoration: none;
+            color: white;
+        }
+        .nav-main a:hover {
+            color: #0a0a0a;
+        }
+        .content {
+            margin: 20px;
+            width: 80%;
+            background-color: rgb(247, 243, 243);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 10px 10px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+        .form-container {
+            margin-top: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .form-group {
+            margin-bottom: 15px;
+            width: 100%;
+            max-width: 500px;
+            display: flex;
+            flex-direction: column;
+        }
+        .form-group label {
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        .form-group input, .form-group textarea {
+            padding: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            width: 100%;
+            box-sizing: border-box;
+        }
+        .form-group textarea {
+            resize: vertical;
+        }
+        .form-group button {
+            padding: 10px 30px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 15px;
+            cursor: pointer;
+        }
+        .form-group button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="video-container">
+        <video autoplay loop muted playsinline>
+            <source src="video.mp4.mp4" type="video/mp4">
+        </video>
+    </div>
+    <h1>Matkailuopas ArOme</h1>
+    <nav class="nav-main">
+        <a href="index.html">Etusivu</a>
+        <a href="second.html">Matkakohteet</a>
+        <a href="third.html">Matkavinkit ja -oppaat</a>
+        <a href="fourth.html">Resurssit ja Työkalut</a>
+        <a href="five.html">Yhteystiedot</a>
+    </nav>
+    <div class="content">
+        <h1>Yhteystiedot ja Asiakaspalvelu</h1>
+
+        <div class="contact-info">
+            <h2>Yhteystiedot</h2>
+            <p>Matkailuopas ArOme</p>
+            <p>Osoite: Tilanhoitajankaari 8 C, 00100 Helsinki</p>
+            <p>Puhelin: +358401394412</p>
+            <p>Sähköposti: info@ymatkailuopasarome.fi</p>
+        </div>
+
+        <div class="customer-service">
+            <h2>Asiakaspalvelu</h2>
+            <p>Olemme täällä auttaaksemme sinua kaikissa kysymyksissäsi ja palautteessasi. Ota rohkeasti yhteyttä!</p>
+            <p>Asiakaspalvelun puhelin: 010 482 8648</p>
+            <p>Sähköposti: asiakaspalvelu@matkailuopasarome.fi</p>
+        </div>
+
+        <div class="form-container">
+            <h2>Ota yhteyttä</h2>
+            <form>
+                <div class="form-group">
+                    <label for="name">Nimi</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Puhelinnumero</label>
+                    <input type="tel" id="phone" name="phone" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Viesti</label>
+                    <textarea id="message" name="message" rows="10" cols="50"  required></textarea>
+                </div>
+                <div class="form-group">
+                    <button type="submit">Lähetä</button>
+                </div>
+            </form>
+        </div>
+
+        <div class="about-us">
+            <h2>Tietoa meistä</h2>
+            <p>Matkailuopas ArOme on palvellut asiakkaitaan jo vuodesta 2018 tarjoten laadukkaita palveluita ja tuotteita. Olemme erikoistuneet matkojen kokemuksiin ja matkojen suunnitteluun.</p>
+        </div>
+    </div>
+</body>
+</html>

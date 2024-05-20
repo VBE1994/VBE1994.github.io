@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matkavinkit ja -oppaat</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            color: rgb(252, 255, 253);
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+        .video-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            z-index: -1;
+        }
+
+        .video-container video {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transform: translate(-50%, -50%);  
+        }
+        }
+        h1, h2, h3 {
+            text-align: center;
+        }
+        .nav-main {
+            background-color: rgb(6, 120, 44);
+            color: #af0ef4;
+            padding: 20px;
+            text-align: center;
+            width: 100%;
+            box-shadow: 0px 10px 10px rgba(0,0,0,0.1);
+            margin-bottom: 20px;
+        }
+        .nav-main a {
+            margin: 0 10px;
+            text-decoration: none;
+            color: white;
+        }
+        .nav-main a:hover {
+            color: #0a0a0a;
+        }
+        .content {
+            margin: 20px;
+            width: 80%;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 10px 10px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+        a {
+            color:white
+        }
+        a:hover {
+            color:white
+        }
+        .card-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .card {
+            color: black;
+            margin: 10px;
+            width: 18rem;
+            border-radius: 10px;
+            box-shadow: 0px 5px 10px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+        .card img {
+            height: auto;
+            width: 100%;
+        }
+        .card-body {
+            padding: 15px;
+        }
+        .card h5, .card p {
+            margin: 10px 0;
+        }
+        .btn {
+            display: block;
+            margin: 10px auto;
+            padding: 10px 20px;
+            background-color: #4d80e6;
+            color: rgb(250, 245, 245);
+            text-align: center;
+            border-radius: 5px;
+            text-decoration: none;
+        }
+        .btn:hover {
+            background-color: #eef2f5;
+        }
+        .side-by-side {
+            display: flex;
+            justify-content: space-around;
+            margin: 20px 0;
+            width: 100%;
+        }
+        .side-by-side > div {
+            flex: 1;
+            margin: 10px;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 10px 10px rgba(0,0,0,0.1);
+        }
+    </style>
+</head>
+<body>
+    <div class="video-container">
+        <video autoplay loop muted playsinline>
+            <source src="video.mp4.mp4" type="video/mp4">
+        </video>
+    </div>
+    <h1>Matkailuopas ArOme</h1>
+    <nav class="nav-main">
+        <a href="index.html">Etusivu</a>
+        <a href="second.html">Matkakohteet</a>
+        <a href="third.html">Matkavinkit ja -oppaat</a>
+        <a href="fourth.html">Resurssit ja Työkalut</a>
+        <a href="five.html">Yhteystiedot</a>
+    </nav>
+    <div class="container">
+        <h1>Matkavinkit ja -oppaat</h1>
+        
+        <h2>Pakolliset varusteet</h2>
+        <ul>
+            <li><a href="https://www.rantapallo.fi/matkavinkit/matkailijan-pakkauslista/">Pakkauslista</a>: Vinkkejä matkalaukun pakkaamiseen.</li>
+            <li><a href="https://www.rantapallo.fi/matkavinkit/matkailijan-pakkauslista/">Retkeilyvarusteet</a>: Välttämättömät varusteet vaellukselle.</li>
+        </ul>
+        
+        <h2>Matkabudjetti</h2>
+        <ul>
+            <li><a href="https://www.roadtripyhdysvallat.com/budjettivinkit/">Budjettivinkit</a>: Kuinka matkustaa edullisesti.</li>
+            <li><a href="https://heta-liitto.fi/tietopankki/henkilokohtainen-apu-matkalla/">Kustannusarviot</a>: Keskimääräiset kustannukset eri kohteisiin.</li>
+        </ul>
+        
+        <h2>Matkavakuutus</h2>
+        <ul>
+            <li><a href="https://www.vertaa.fi/vakuutukset/?gclid=Cj0KCQjwgJyyBhCGARIsAK8LVLPVWabpekNzDCQgi8FsVVrAIdyEAoxexkWI-WBJfM1Op4uy11VlZU0aAoG9EALw_wcB">Vakuutusvertailu</a>: Parhaat matkavakuutukset ja mitä ne kattavat.</li>
+            <li><a href="https://www.if.fi/henkiloasiakkaat/vakuutukset/matkavakuutus/matkustaminen/kymmenen-faktaa-matkavakuutuksesta">Vakuutuksen tarve</a>: Miksi matkavakuutus on tärkeä.</li>
+        </ul>
+        
+        <h2>Terveydenhuolto ja turvallisuus</h2>
+        <ul>
+            <li><a href="https://rokote.fi/matkailijat/">Rokotukset</a>: Tarvittavat rokotukset eri kohteisiin.</li>
+            <li><a href="https://askelterveyteen.com/12-vinkkia-turvalliseen-matkustamiseen/">Turvallisuusvinkit</a>: Kuinka pysyä turvassa matkalla.</li>
+        </ul>
+    </div>
+
+    <div class="side-by-side">
+        <div id="pakkauslista">
+            <h2>Pakkauslista</h2>
+            <p>Tässä on joitakin vinkkejä matkalaukun pakkaamiseen:</p>
+            <ul>
+                <li>Passi tai kohteesta riippuen henkilökortti</li>
+                <li>Lento-, bussi- ja junaliput sähköpostiin</li>
+                <li>Maksu- ja luottokortti</li>
+                <li>Matkavakuutus</li>
+                <li>Matkapuhelin ja laturi</li>
+                <li>Varavirtalähde</li>
+                <li>Reppu ja/tai matkalaukku sekä varalle kangaskassi</li>
+                <li>Karttasovellukseen merkitty hotelli ja muut tärkeät paikat</li>
+            </ul>
+        </div>
+
+        <div id="retkeilyvarusteet">
+            <h2>Retkeilyvarusteet</h2>
+            <p>Tässä on lista välttämättömistä varusteista vaellukselle:</p>
+            <ul>
+                <li>Kartta, mielellään vedenpitävässä kotelossa (elektroniikka voi pettää)</li>
+                <li>Kompassi</li>
+                <li>Auringolta suojautuminen</li>
+                <li>Aurinkovoide</li>
+                <li>Aurinkokertoimella varustettu huulirasva</li>
+                <li>Aurinkolasit</li>
+                <li>Valaistus</li>
+                <li>Otsalamppu tai taskulamppu (otsalamppu on kätevämpi)</li>
+                <li>Paristoja</li>
+                <li>Ensiapupakkaus</li>
+                <li>Peruslaatuinen ensiapupakkaus</li>
+                <li>Särkylääkettä</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
+

@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matkailuopas ArOme</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: rgb(246, 244, 244);
+            color: rgb(248, 250, 248);
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .video-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            z-index: -1;
+        }
+
+        .video-container video {
+                    position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transform: translate(-50%, -50%);    
+        }
+        h1, h2, h3 {
+            text-align: center;
+        }
+        .nav-main {
+            background-color: rgb(6, 120, 44);
+            color: #af0ef4;
+            padding: 20px;
+            text-align: center;
+            width: 100%;
+            box-shadow: 0px 10px 10px rgba(0,0,0,0.1);
+            margin-bottom: 20px;
+        }
+        .nav-main a {
+            margin: 0 10px;
+            text-decoration: none;
+            color: white;
+        }
+        .nav-main a:hover {
+            color: #0a0a0a;
+        }
+        .content {
+            margin: 20px;
+            width: 80%;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 10px 10px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+        a {
+            color:white
+        }
+        a:hover {
+            color:white
+        }
+        .card-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .card {
+            background-color: white;
+            color: black;
+            margin: 10px;
+            width: 18rem;
+            border-radius: 10px;
+            box-shadow: 0px 5px 10px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+        .card img {
+            height: auto;
+            width: 100%;
+        }
+        .card-body {
+            padding: 15px;
+        }
+        .card h5, .card p {
+            margin: 10px 0;
+        }
+        .btn {
+            display: block;
+            margin: 10px auto;
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            text-align: center;
+            border-radius: 5px;
+            text-decoration: none;
+        }
+        .btn:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="video-container">
+        <video autoplay loop muted playsinline>
+            <source src="video.mp4.mp4" type="video/mp4">
+        </video>
+    </div>
+    <h1>Matkailuopas ArOme</h1>
+    <nav class="nav-main">
+        <a href="index.html">Etusivu</a>
+        <a href="second.html">Matkakohteet</a>
+        <a href="third.html">Matkavinkit ja -oppaat</a>
+        <a href="fourth.html">Resurssit ja Työkalut</a>
+        <a href="five.html">Yhteystiedot</a>
+    </nav>
+    <div class="content">
+        </div>
+        <h2>Viimeisimmät blogikirjoitukset</h2>
+        <ul>
+            <li><a href="https://www.alppimatkat.fi/vaellusmatkat/?gad_source=1&gclid=Cj0KCQjw3ZayBhDRARIsAPWzx8rGobT9WM7SMabLe_t7-Q6Ac-1Fww5W-DXk3U4DmIZSN6USjywIJFMaAizREALw_wcB">Parhaat vaellusreitit Alpeilla</a></li>
+            <li><a href="https://kerranelamassa.fi/malediivit-matkailu/sukellus-ja-snorklaus/">Sukellusseikkailu Malediiveilla</a></li>
+            <li><a href="https://www.matkallamissamilloinkin.com/kioton-kuuluisimmilla-temppeleilla/">Kulttuurimatka Kioton temppeleihin</a></li>
+        </ul>
+    </div>
+    <div id="matkakohteet" class="content">
+        <h2>Matkakohteet</h2>
+        <h3>Maanosat ja maat</h3>
+        <h4>Eurooppa</h4>
+        <ul>
+            <li><a href="https://www.rantapallo.fi/ranska/">Ranska</a></li>
+            <li><a href="https://www.aurinkomatkat.fi/italia">Italia</a></li>
+            <li><a href="https://www.aurinkomatkat.fi/saksa">Saksa</a></li>
+        </ul>
+        <h4>Aasia</h4>
+        <ul>
+            <li><a href="https://www.aurinkomatkat.fi/thaimaa">Thaimaa</a></li>
+            <li><a href="https://www.aurinkomatkat.fi/japani">Japani</a></li>
+            <li><a href="https://www.tjareborg.fi/indonesia/bali">Indonesia</a></li>
+        </ul>
+        <h4>Pohjois-Amerikka</h4>
+        <ul>
+            <li><a href="https://www.apollomatkat.fi/usa">USA</a></li>
+            <li><a href="https://www.albatros-travel.fi/matkakohteet/pohjois-amerikka/kanada">Kanada</a></li>
+            <li><a href="https://www.tjareborg.fi/meksiko">Meksiko</a></li>
+        </ul>
+    </div>
+    <div id="blogi" class="content">
+        <h2>Blogikirjoitus: Matkailu Ympäri Maailmaa</h2>
+        <p>
+           
+           <h3>Eurooppa</h3> 
+            Eurooppa on täynnä historiaa, kulttuuria ja kauniita maisemia. Se on myös yksi helpoimmista mantereista matkustaa, kiitos sen hyvän infrastruktuurin ja lyhyiden etäisyyksien.
+            
+            Ranska: Pariisi on tunnettu romanttisesta ilmapiiristään, mutta Ranskan maaseudulla on myös paljon tarjottavaa. Loire-laakson linnat, Provencen laventelipellot ja Ranskan Riviera ovat kaikki näkemisen arvoisia.
+            
+            Italia: Italiassa on jotain jokaiselle matkailijalle. Rooma tarjoaa historiallisia nähtävyyksiä kuten Colosseum ja Vatikaani, kun taas Firenze on taiteen ja kulttuurin keskus. Pohjoisessa voit nauttia Alppien kauneudesta ja etelässä tutustua Sisilian rikkaaseen historiaan.
+            
+            Saksa: Berliini on nuorekas ja dynaaminen kaupunki, joka on täynnä historiaa ja modernia kulttuuria. Etelä-Saksan Baijeri tarjoaa upeita maisemia, viehättäviä kyliä ja maailman kuuluisimman olutfestivaalin, Oktoberfestin.
+            
+            <h3>Aasia</h3>
+            Aasia on maanosana valtava ja monimuotoinen, ja se tarjoaa matkailijoille loputtomasti seikkailumahdollisuuksia.
+            
+            Thaimaa: Thaimaa on tunnettu upeista rannoistaan, herkullisesta ruoastaan ja ystävällisistä ihmisistään. Bangkok on vilkas kaupunki, jossa moderni ja perinteinen kulttuuri kohtaavat, kun taas Chiang Mai tarjoaa mahdollisuuden tutustua Pohjois-Thaimaan vuoristoalueisiin ja temppeleihin.
+            
+            Japani: Japani yhdistää perinteet ja modernisuuden ainutlaatuisella tavalla. Tokiossa voit kokea futuristisia pilvenpiirtäjiä ja vilkkaita katuja, kun taas Kiotossa voit tutustua perinteisiin temppeleihin ja kauniisiin puutarhoihin. Japanin maaseutu tarjoaa rauhallisia maisemia ja mahdollisuuden tutustua paikalliseen elämäntapaan.
+            
+            Indonesia: Indonesia on saarivaltio, joka koostuu tuhansista saarista. Bali on suosittu matkakohde, joka tunnetaan upeista rannoistaan, surffausmahdollisuuksistaan ja hindutemppeleistään. Yogyakarta Jaavan saarella on kulttuurin keskus, jossa voit tutustua Borobudurin ja Prambananin temppeleihin.
+            
+           <h3>Pohjois-Amerikka</h3> 
+            Pohjois-Amerikka tarjoaa valtavan kirjon erilaisia matkailukohteita ja elämyksiä.
+            
+            USA: Yhdysvallat on valtava maa, joka tarjoaa monipuolisia matkailukokemuksia. New York on yksi maailman tunnetuimmista kaupungeista, jossa voit kokea kulttuuria, viihdettä ja gastronomiaa. Luonnon ystäville Yellowstone ja Grand Canyon tarjoavat unohtumattomia maisemia ja mahdollisuuksia ulkoiluun. Kalifornia tarjoaa upeita rantoja, viinitiloja ja ikonisia kaupunkeja kuten Los Angeles ja San Francisco.
+            
+            Kanada: Kanada tunnetaan luonnon kauneudestaan. Banffin ja Jasperin kansallispuistot Albertassa tarjoavat henkeäsalpaavia vuoristomaisemia, järviä ja mahdollisuuksia ulkoiluun. Kaupungit kuten Vancouver ja Toronto tarjoavat kulttuuria ja monipuolisia aktiviteetteja ympäri vuoden.
+            
+            Meksiko: Meksiko tarjoaa kulttuurien ja maisemien kirjavan kirjon. Mexico City on vilkas metropoli täynnä historiaa ja kulttuuria, kun taas Jukatanin niemimaa tarjoaa upeat rannat ja Maya-rauniot. Oaxaca tunnetaan perinteisestä ruoastaan ja rikkaasta kulttuuriperinnöstään.
+            
+           
+          <h3>Suunnittele etukäteen:</h3>   Vaikka spontaanius on tärkeää, hyvän matkasuunnitelman laatiminen voi auttaa sinua saamaan kaiken irti matkasta.
+            Opettele perusfraasit: Paikallisten kielten perusteiden oppiminen voi avata ovia ja parantaa matkakokemustasi.
+            Ole avoin uusille kokemuksille: Yritä olla avoin uusille kulttuureille, ruoille ja tavoille. Se tekee matkasta rikkaamman ja unohtumattomamman.
+            Matkailu ympäri maailmaa on elämää rikastuttava kokemus, joka avartaa näkemyksiä ja tarjoaa unohtumattomia hetkiä. Toivottavasti nämä vinkit ja kohde-esittelyt inspiroivat sinua suunnittelemaan omaa seikkailuasi!
+            
+        </p>
+    </div>
+</body>
+</html>
+
